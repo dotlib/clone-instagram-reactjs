@@ -16,24 +16,6 @@ export default class New extends Component {
   };
 
   /**
-   * Dispara o envio para a api
-   */
-  handleSubmit = async e => {
-    e.preventDefault();
-
-    const data = new FormData();
-    data.append("image", this.state.image);
-    data.append("author", this.state.author);
-    data.append("place", this.state.place);
-    data.append("description", this.state.description);
-    data.append("hashtags", this.state.hashtags);
-
-    await api.post("posts", data);
-
-    this.props.history.push("/");
-  };
-
-  /**
    * Manipulador do campo de imagem
    */
   handleImageChange = e => {
@@ -49,7 +31,7 @@ export default class New extends Component {
 
   render() {
     return (
-      <form id="new-post" onSubmit={this.handleSubmit}>
+      <form id="new-post" onSubmit={() => {}}>
         <input type="file" onChange={this.handleImageChange} />
 
         <input
