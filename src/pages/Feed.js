@@ -1,8 +1,5 @@
 import React, { Component } from "react";
 
-// Services
-import api from "../services/api";
-
 // Assets
 import more from "../assets/more.svg";
 import like from "../assets/like.svg";
